@@ -16,3 +16,8 @@ async def read_root(request: Request):
 @app.get("/devops", response_class=HTMLResponse)
 async def read_devops(request: Request):
     return templates.TemplateResponse("devops.html.jinja2", {"request": request})
+
+
+@app.get("/senior_developers", response_class=HTMLResponse)
+async def read_senior_developers(request: Request):
+    return templates.TemplateResponse("senior_developers.html.jinja2", {"request": request})
