@@ -11,3 +11,8 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html.jinja2", {"request": request})
+
+
+@app.get("/devops", response_class=HTMLResponse)
+async def read_devops(request: Request):
+    return templates.TemplateResponse("devops.html.jinja2", {"request": request})
