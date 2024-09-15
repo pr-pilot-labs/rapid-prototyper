@@ -21,3 +21,8 @@ async def read_devops(request: Request):
 @app.get("/senior_developers", response_class=HTMLResponse)
 async def read_senior_developers(request: Request):
     return templates.TemplateResponse("senior_developers.html.jinja2", {"request": request})
+
+
+@app.get("/indie_developers", response_class=HTMLResponse)
+async def read_indie_developers(request: Request):
+    return templates.TemplateResponse("indie_developers.html.jinja2", {"request": request})
